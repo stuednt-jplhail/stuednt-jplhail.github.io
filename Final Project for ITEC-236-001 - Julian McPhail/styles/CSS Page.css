@@ -1,0 +1,221 @@
+/* 
+*****************************************************************************
+Title: CSS Page
+Author: Julian McPhail
+School/Term: Southern Illinois University, Spring 2023
+Developed: May 09, 2023
+Tested: May 09, 2023; Passed on Edge Browser.
+******************************************************************************
+*/
+
+/* tablet landscape and desktop layout (960px or more) */ 
+
+@media only screen and (max-width: 2024px) { 
+  #mobile_menu { display: none; }    
+}
+/* tablet portrait layout (768px to 959px) */
+@media only screen and (max-width: 959px) { 
+  #mobile_menu { display: none; } 
+}
+/* mobile landscape layout (480px to 767px) */ 
+
+@media only screen and (max-width: 767px) { 
+  #mobile_menu { display: block; }
+  #nav_menu { display: none; }
+  header h2 { font-size: 1.375em; }       /* 22 ÷ 16 */ 
+  header h3 { font-size: .8125em; }   /* 13 ÷ 16 */ 
+  p { font-size: .875em; }            /* 14 ÷ 16 */ 
+  article h1, main h2, aside h2
+      { font-size: 1em; }             /* base font size */ 
+  aside li { font-size: .875em; }     /* 14 ÷ 16 */
+  
+}
+/* mobile portrait layout (479px or less) */ 
+
+@media only screen and (max-width: 479px) { 
+  #mobile_menu { display: block; }
+  #nav_menu { display: none; }
+  header h2 { font-size: 1.375em; }   /* 22 ÷ 16 */ 
+  header h3 { font-size: .8125em; }   /* 13 ÷ 16 */ 
+  p { font-size: .875em; }            /* 14 ÷ 16 */ 
+  article h1, main h2, aside h2 
+      { font-size: 1em; }             /* base font size */ 
+  aside li { font-size: .875em; }     /* 14 ÷ 16 */ 
+
+}
+
+/* the styles for the elements */ 
+body {
+  
+  font-size: 1em;     /* 16 ÷ 16  */
+  width: 90%;          /* changed from 725px;*/
+  max-width: 1024px;
+  background-color: rgb(155, 129, 129); /* this color is gray */
+  margin: 10px auto;
+  } 
+header { 
+  width: 97.917%;          /* 940 / 960 * 100 */
+  padding: 10px 1.0417%;
+  clear: both; 
+  font-size: 2em;
+
+
+   }
+
+main {
+  width: 47.917%;          /* 480 / 960 * 100 */
+  padding: 10px 1.0417%;
+  background-color: #fdba00; /* this color is orange for column panel */
+  float: left; }
+
+aside {
+  width: 47.917%;          /* 480 / 960 * 100 */
+  padding: 10px 1.0417%;
+  background-color: #fdba00; /* this color is orange for column panel */
+  float: right; }
+h1 {
+  font-size: 1.75em; /* 28 ÷ 16 */ 
+  padding: 10px;
+}
+
+h2 {
+  font-size: 1.5em; /* 24 ÷ 16 */ 
+  padding: 10px;
+} 
+
+h3 {
+  font-size: 1.125em; /* 18 ÷ 16 */ 
+  padding: 10px;
+}
+table, th, td {
+  font-size: 1.2em;
+  padding-left: 10px 1.0417%;
+  padding-right: 10px;
+  border: 1px solid black;
+  border-collapse: collapse;
+} 
+p { 
+  font-size: 1.125em; /* 18 ÷ 16 */ 
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+blockquote {
+  width: 47.917%;          /* 480 / 960 * 100 */
+  padding: 10px 1.0417%;
+  float: center; 
+}
+footer { 
+  font-size: .75em; /* 12 ÷ 16 */ 
+  width: 97.917%;            /* 940 / 960 * 100 */
+  padding: 10px 1.0417%;
+  clear: both; 
+   }
+  
+ul { 
+  
+  padding-left: 10px; } 
+
+li {
+  padding-left: 10px; /* space between bullet and text */ 
+ 
+} 
+
+
+/* Navigation css aligned left */ 
+#nav_menu ul {
+   list-style-type: none; padding: 1em 0;
+   font-size: 1.5em;
+   text-align: left;
+   } 
+#nav_menu ul li { 
+  display: inline; 
+  padding: 0 1em; } 
+#nav_menu ul li a { 
+  font-weight: bold; 
+  color: #0a0909; }
+#nav_menu ul li a.current { text-decoration: none; }
+
+/* Special main image on index page with blue border and rounded corner- must have .bluetouch div class */ 
+
+
+
+figure {
+  float: left;
+  margin-right: 1.5em; 
+}
+
+figcaption {
+  display: block;
+  font-weight: bold;
+  font-size: 2.5em;
+  padding-top: .25em;
+  margin-bottom: 1em;
+  border-bottom: 1px solid black;
+}
+
+
+
+
+
+.fun {
+  width: 100%;
+  min-width: 300px;
+  max-width: 1024px;
+  position: relative;	
+margin:  0 auto;
+max-width: 630px;
+  height: 350px;
+}
+
+
+
+/*  hover over and  blue touch on banner */
+/* burned in */
+.fun img {
+  
+  width: 100%;
+  min-width: 300px;
+  max-width: 1024px;
+  position: absolute;	
+overflow: hidden;
+  border: 2px solid #B5D3E7;
+  border-radius: 1000px;
+  -moz-border-radius: 1000px;
+  margin: 0;
+opacity: 1;
+  /* Sets the width and height for the images*/
+max-width: 1024px;
+height: 350px;
+}
+
+/*  fading effect. */
+
+.fun .funner{
+z-index: 9999;
+transition: opacity 2s linear;
+cursor: pointer;
+}
+
+/* burned in effect on 2nd image */
+.fun:hover > .funner {
+opacity: 0.1;
+}
+
+img {
+  width: 100%;
+  max-width: 100px;
+  position: static;
+  }
+
+/* music controls for later
+
+{
+display:none;
+}
+
+audio, embed {
+position: absolute;
+z-index: -9999;
+}
+*/
